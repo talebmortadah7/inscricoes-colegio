@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição - Colégio Gabriel de Lara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-blue-700 text-white p-4 shadow-md">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-4 md:mb-0">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuNFGBiUJKjjBtT_kami9U0eBIo2i1THyAQ&s">
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-center md:text-right">Colégio Gabriel de Lara</h1>
+            <nav class="mt-4 md:mt-0">
+                <a href="inscritos.html" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Ver Inscritos
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">Formulário de Inscrição do Curso de Cerâmica</h2>
+            <p class="text-gray-600 mb-8 text-center">Preencha os campos abaixo para realizar sua inscrição no Colégio Gabriel de Lara.</p>
+
+            <form id="registrationForm" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="nome" class="block text-gray-700 text-sm font-semibold mb-2">Nome Completo do Aluno:</label>
+                        <input type="text" id="nome" name="nome" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="dataNascimento" class="block text-gray-700 text-sm font-semibold mb-2">Data de Nascimento:</label>
+                        <input type="date" id="dataNascimento" name="dataNascimento" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="cpf" class="block text-gray-700 text-sm font-semibold mb-2">CPF do Aluno:</label>
+                        <input type="text" id="cpf" name="cpf" placeholder="Ex: 123.456.789-00" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="rg" class="block text-gray-700 text-sm font-semibold mb-2">RG do Aluno:</label>
+                        <input type="text" id="rg" name="rg" placeholder="Ex: 12.345.678-9" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">E-mail do Responsável:</label>
+                    <input type="email" id="email" name="email" placeholder="email@exemplo.com" required
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="telefone" class="block text-gray-700 text-sm font-semibold mb-2">Telefone do Responsável:</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Ex: (DD) 98765-4321" required
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="celular" class="block text-gray-700 text-sm font-semibold mb-2">Celular do Responsável:</label>
+                        <input type="tel" id="celular" name="celular" placeholder="Ex: (DD) 99876-5432"
+                               class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="endereco" class="block text-gray-700 text-sm font-semibold mb-2">Endereço Completo:</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Rua, Número, Bairro, Cidade, Estado, CEP" required
+                           class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <div>
+                    <label for="serieDesejada" class="block text-gray-700 text-sm font-semibold mb-2">Série Desejada:</label>
+                    <select id="serieDesejada" name="serieDesejada" required
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="">Selecione a série</option>
+                        <option value="6anoFundamental">6º Ano do Ensino Fundamental II</option>
+                        <option value="7anoFundamental">7º Ano do Ensino Fundamental II</option>
+                        <option value="8anoFundamental">8º Ano do Ensino Fundamental II</option>
+                        <option value="9anoFundamental">9º Ano do Ensino Fundamental II</option>
+                        <option value="1anoMedio">1º Ano do Ensino Médio</option>
+                        <option value="2anoMedio">2º Ano do Ensino Médio</option>
+                        <option value="3anoMedio">3º Ano do Ensino Médio</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="documentoAnexo" class="block text-gray-700 text-sm font-semibold mb-2">Anexar Documento (Opcional):</label>
+                    <input type="file" id="documentoAnexo" name="documentoAnexo"
+                           class="w-full text-gray-700 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100">
+                    <p class="text-xs text-gray-500 mt-1">Ex: Comprovante de Residência, Histórico Escolar.</p>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit"
+                            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                        Enviar Inscrição
+                    </button>
+                </div>
+            </form>
+
+            <div id="confirmationMessage" class="hidden mt-8 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center" role="alert">
+                <p class="font-bold">Inscrição enviada com sucesso!</p>
+                <p>Agradecemos seu interesse. Entraremos em contato em breve.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-8">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Colégio Gabriel de Lara. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">E-mail: mosgabrieldelara@escola.pr.gov.br</p>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

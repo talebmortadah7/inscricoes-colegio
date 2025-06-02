@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscritos Colégio Gabriel de Lara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+    <header class="bg-blue-700 text-white p-4 shadow-md">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-4 md:mb-0">
+           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjuNFGBiUJKjjBtT_kami9U0eBIo2i1THyAQ&s" alt="Logo do Colégio Gabriel de Lara" class="rounded-lg shadow-md max-w-xs w-full">
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-center md:text-right">Inscritos - Do Curso De Cerâmica</h1>
+            <nav class="mt-4 md:mt-0">
+                <a href="index.html" class="bg-blue-600 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Voltar para Inscrição
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow container mx-auto p-4 md:p-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 md:p-10 max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6 text-center">Lista de Alunos Inscritos</h2>
+
+            <div id="loadingMessage" class="text-center text-gray-600 mb-4">Carregando inscritos...</div>
+            <div id="noStudentsMessage" class="hidden text-center text-gray-600 mb-4">Nenhum aluno inscrito ainda.</div>
+
+            <div id="studentsList" class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-lg shadow-sm">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-700 uppercase text-sm leading-normal">
+                            <th class="py-3 px-6 text-left">Nome</th>
+                            <th class="py-3 px-6 text-left">Data Nasc.</th>
+                            <th class="py-3 px-6 text-left">Série</th>
+                            <th class="py-3 px-6 text-left">E-mail</th>
+                            <th class="py-3 px-6 text-left">Telefone</th>
+                            <th class="py-3 px-6 text-left">ID do Usuário</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-600 text-sm font-light" id="studentsTableBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 text-center mt-8">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Colégio Gabriel de Lara. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">E-mail: colegiogabriel@gmail.com</p>
+        </div>
+    </footer>
+
+    <script type="module" src="inscritos.js"></script>
+</body>
+</html>
